@@ -1,0 +1,1 @@
+{"html":"<link href=\"##_!@beyond-tests/sr-app!_##global.css\" rel=\"stylesheet\"/><link href=\"##_!@beyond-tests/sr-app!_##layout/main.css\" rel=\"stylesheet\"/><main><beyond-layout-children></beyond-layout-children></main>"}

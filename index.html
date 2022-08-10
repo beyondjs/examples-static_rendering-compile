@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Static Rendering App</title>
+    <meta charset="utf-8"/>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <link rel="stylesheet" type="text/css" id="beyond-application-styles" href="/styles.css" media="screen" />
+    <link rel="stylesheet" type="text/css" id="beyond-global-styles" href="/global.css" media="screen" />
+    <link rel="icon" href="data:;base64,=">
+    
+    <script>
+    window.__app_package = '@beyond-tests/sr-app';
+    
+    // Set global baseDir and baseUrl variables
+    const baseDir = window.baseDir = '/';
+    const baseUrl = window.baseUrl = (() => {
+        const {protocol, host, pathname} = location;
+        if (protocol === 'file:') {
+            const path = pathname.split('/');
+            path.pop(); // Remove 'index.html'
+            path.join('/');
+            return `file://${path.join('/')}`;
+        }
+        else {
+            return `${protocol}//${host}${baseDir}`;
+        }
+    })();
+    </script>
+    
+    
+    <script src="/packages/@beyond-js/kernel/vendor/require.min.js"></script>
+    <script>
+    requirejs.config({waitSeconds: 30});
+    const paths = {'@beyond-tests/sr-app': baseUrl.endsWith('/') ? baseUrl.slice(0, baseUrl.length - 1) : baseUrl};
+    requirejs.config({baseUrl: '/packages', paths});
+    require(["@beyond-js/widgets/render","@beyond-js/widgets/application","@beyond-js/widgets/layout","@beyond-js/local/main"]);
+    require(['@beyond-tests/sr-app/start']);
+    </script>
+    
+</head>
+
+<body>
+<div id="beyond-topbar"></div> <!-- top bar for iOS -->
+</body>
+</html>

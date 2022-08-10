@@ -1,0 +1,1 @@
+{"html":"<link href=\"##_!@beyond-tests/sr-app!_##global.css\" rel=\"stylesheet\"/><link href=\"##_!@beyond-tests/sr-app!_##message.css\" rel=\"stylesheet\"/><div>Hello <span class=\"name\"></span>, I am a widget and I have a message for you</div>"}
