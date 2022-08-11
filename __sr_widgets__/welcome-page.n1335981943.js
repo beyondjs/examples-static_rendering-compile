@@ -1,1 +1,0 @@
-{"html":"<link href=\"##_!@beyond-tests/sr-app!_##global.css\" rel=\"stylesheet\"/><link href=\"##_!@beyond-tests/sr-app!_##welcome.css\" rel=\"stylesheet\"/><h3 class=\"name\"> Welcome, im a page with static rendering.</h3><message-w user=\"box\"></message-w>"}

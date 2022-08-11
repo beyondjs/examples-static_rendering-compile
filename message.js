@@ -19,7 +19,7 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
   ;
   externals.register(new Map([["react", dependency_4]]));
   brequire('@beyond-js/widgets/render').widgets.register([{
-    "name": "message-w",
+    "name": "message-wd",
     "id": "@beyond-tests/sr-app/message"
   }]);
   brequire('@beyond-js/kernel/styles').styles.register('@beyond-tests/sr-app/message');
@@ -59,7 +59,7 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
   *****************************/
 
   ims.set('./views/index', {
-    hash: 3983319350,
+    hash: 190506424,
     creator: function (require, exports) {
       "use strict";
 
@@ -73,12 +73,10 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
 
 
       function Widget(props) {
-        const user = props.attributes.get('user');
-        console.log(2, props.attributes);
-        console.log(3, user);
-        return React.createElement("div", null, "Hello ", React.createElement("span", {
+        const entry = props.attributes.get('entry');
+        return React.createElement("div", null, "Dev, i'm a ", React.createElement("span", {
           className: "name"
-        }, user), ", I am a widget and I have a message for you");
+        }, "Static Rendering(SR) widget "), "and I'm displaying the attribute you put in the URL: ", React.createElement("strong", null, entry));
       }
     }
   });
@@ -114,4 +112,4 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
 
   __pkg.initialise(ims);
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQUFBOztNQUNBO01BRU87OztNQUFVLE1BQ1hBLFVBRFcsU0FDUUMsMkJBRFIsQ0FDNkI7UUFDaEMsSUFBTkMsTUFBTTtVQUNOLE9BQU9BLGFBQVA7UUFDSDs7TUFIeUM7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7TUNKOUM7TUFFTzs7O01BQVUsU0FDUkEsTUFEUSxDQUNEQyxLQURDLEVBQ0k7UUFDakIsTUFBTUMsSUFBSSxHQUFHRCxLQUFLLENBQUNFLFVBQU5GLENBQWlCRyxHQUFqQkgsQ0FBcUIsTUFBckJBLENBQWI7UUFDQUksT0FBTyxDQUFDQyxHQUFSRCxDQUFZLENBQVpBLEVBQWVKLEtBQUssQ0FBQ0UsVUFBckJFO1FBQ0FBLE9BQU8sQ0FBQ0MsR0FBUkQsQ0FBWSxDQUFaQSxFQUFlSCxJQUFmRztRQUVBLE9BQU9FLDJDQUFXQTtVQUFNQyxTQUFTLEVBQUM7UUFBaEJELEdBQXdCTCxJQUF4QkssQ0FBWEEsaURBQVA7TUFDSCIsIm5hbWVzIjpbIkNvbnRyb2xsZXIiLCJSZWFjdFdpZGdldENvbnRyb2xsZXIiLCJXaWRnZXQiLCJwcm9wcyIsInVzZXIiLCJhdHRyaWJ1dGVzIiwiZ2V0IiwiY29uc29sZSIsImxvZyIsIlJlYWN0IiwiY2xhc3NOYW1lIl0sInNvdXJjZVJvb3QiOiIvIiwic291cmNlcyI6WyJwcm9qZWN0L21vZHVsZXMvbWVzc2FnZS93aWRnZXQvdHMvY29udHJvbGxlci50cyIsInByb2plY3QvbW9kdWxlcy9tZXNzYWdlL3dpZGdldC90cy92aWV3cy9pbmRleC50c3giXSwic291cmNlc0NvbnRlbnQiOltudWxsLG51bGxdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQUFBOztNQUNBO01BRU87OztNQUFVLE1BQ1hBLFVBRFcsU0FDUUMsMkJBRFIsQ0FDNkI7UUFDaEMsSUFBTkMsTUFBTTtVQUNOLE9BQU9BLGFBQVA7UUFDSDs7TUFIeUM7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7TUNKOUM7TUFFTzs7O01BQVUsU0FDUkEsTUFEUSxDQUNEQyxLQURDLEVBQ0k7UUFDakIsTUFBTUMsS0FBSyxHQUFHRCxLQUFLLENBQUNFLFVBQU5GLENBQWlCRyxHQUFqQkgsQ0FBcUIsT0FBckJBLENBQWQ7UUFFQSxPQUNJSSxnREFDZUE7VUFBTUMsU0FBUyxFQUFDO1FBQWhCRCxHQUFzQiw4QkFBdEJBLENBRGZBLDJEQUV5REEsb0NBQVNILEtBQVRHLENBRnpEQSxDQURKO01BTUgiLCJuYW1lcyI6WyJDb250cm9sbGVyIiwiUmVhY3RXaWRnZXRDb250cm9sbGVyIiwiV2lkZ2V0IiwicHJvcHMiLCJlbnRyeSIsImF0dHJpYnV0ZXMiLCJnZXQiLCJSZWFjdCIsImNsYXNzTmFtZSJdLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXMiOlsicHJvamVjdC9tb2R1bGVzL21lc3NhZ2Uvd2lkZ2V0L3RzL2NvbnRyb2xsZXIudHMiLCJwcm9qZWN0L21vZHVsZXMvbWVzc2FnZS93aWRnZXQvdHMvdmlld3MvaW5kZXgudHN4Il0sInNvdXJjZXNDb250ZW50IjpbbnVsbCxudWxsXX0=

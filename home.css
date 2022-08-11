@@ -1,0 +1,9 @@
+.page-container {
+  padding: 20px;
+}
+.page-container .name {
+  color: var(--primary-dark);
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInByb2plY3QvbW9kdWxlcy9ob21lL3N0eWxlcy9wcm9qZWN0XFxtb2R1bGVzXFxob21lXFxzdHlsZXNcXHN0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7O0FBRUE7RUFDRSIsImZpbGUiOiIiLCJzb3VyY2VSb290IjoiLyJ9 */

@@ -13,6 +13,15 @@ define(["@beyond-js/kernel/bundle", "@beyond-js/kernel/transversals", "@beyond-j
     widgets
   } = brequire('@beyond-js/widgets/render');
   widgets.register([{
+    "name": "home-page",
+    "id": "@beyond-tests/sr-app/home",
+    "is": "page",
+    "render": {
+      "csr": false,
+      "sr": ["/beyond", "/sr"]
+    },
+    "route": "/${entry}"
+  }, {
     "name": "main-layout",
     "id": "@beyond-tests/sr-app/layout/main",
     "is": "layout",
@@ -21,24 +30,17 @@ define(["@beyond-js/kernel/bundle", "@beyond-js/kernel/transversals", "@beyond-j
       "sr": []
     }
   }, {
-    "name": "message-w",
-    "attrs": ["user"],
+    "name": "message-wd",
+    "attrs": ["entry"],
     "id": "@beyond-tests/sr-app/message",
     "render": {
       "csr": false,
       "sr": [{
-        "user": "box"
+        "entry": "beyond"
+      }, {
+        "entry": "sr"
       }]
     }
-  }, {
-    "name": "welcome-page",
-    "id": "@beyond-tests/sr-app/welcome",
-    "is": "page",
-    "render": {
-      "csr": false,
-      "sr": ["/welcome/box"]
-    },
-    "route": "/welcome/${user}"
   }]);
   const bundles = new Map();
   /**********************

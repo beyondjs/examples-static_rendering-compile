@@ -12,19 +12,19 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
   } = dependency_0;
 
   const __pkg = new __Bundle({
-    "module": "@beyond-tests/sr-app/welcome",
+    "module": "@beyond-tests/sr-app/home",
     "bundle": "widget"
   }, __url).package();
 
   ;
   externals.register(new Map([["react", dependency_3]]));
   brequire('@beyond-js/widgets/render').widgets.register([{
-    "name": "welcome-page",
-    "id": "@beyond-tests/sr-app/welcome",
+    "name": "home-page",
+    "id": "@beyond-tests/sr-app/home",
     "is": "page",
-    "route": "/welcome/${user}"
+    "route": "/${entry}"
   }]);
-  brequire('@beyond-js/kernel/styles').styles.register('@beyond-tests/sr-app/welcome');
+  brequire('@beyond-js/kernel/styles').styles.register('@beyond-tests/sr-app/home');
   const ims = new Map();
   /****************************
   INTERNAL MODULE: ./controller
@@ -61,7 +61,7 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
   *****************************/
 
   ims.set('./views/index', {
-    hash: 1452531555,
+    hash: 561829101,
     creator: function (require, exports) {
       "use strict";
 
@@ -73,10 +73,13 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
       var React = require("react");
 
       function Page(props) {
-        return React.createElement(React.Fragment, null, React.createElement("h3", {
+        const entry = props.uri.vars.get('entry');
+        return React.createElement("div", {
+          className: "page-container"
+        }, React.createElement("h2", null, "Welcome to ", React.createElement("span", {
           className: "name"
-        }, " Welcome, im a page with static rendering."), React.createElement("message-w", {
-          user: props.uri.vars.get('user')
+        }, "BeyondJs test"), ". Im a page with static rendering."), React.createElement("message-wd", {
+          entry: entry
         }));
       }
     }
@@ -107,4 +110,4 @@ define(["exports", "module", "@beyond-js/kernel/bundle", "@beyond-js/widgets/ren
 
   __pkg.initialise(ims);
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O01BQUE7O01BQ0E7TUFFTzs7O01BQVUsTUFDWEEsVUFEVyxTQUNRQywrQkFEUixDQUNpQztRQUNwQyxJQUFOQyxNQUFNO1VBQ04sT0FBT0MsV0FBUDtRQUNIOztNQUg2Qzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQ0psRDs7TUFFTSxTQUFVQSxJQUFWLENBQWVDLEtBQWYsRUFBb0I7UUFDdEIsT0FDSUMsMENBQ0lBO1VBQUlDLFNBQVMsRUFBQztRQUFkRCxHQUFvQiw0Q0FBcEJBLENBREpBLEVBRUlBO1VBQVdFLElBQUksRUFBRUgsS0FBSyxDQUFDSSxHQUFOSixDQUFVSyxJQUFWTCxDQUFlTSxHQUFmTixDQUFtQixNQUFuQkE7UUFBakJDLEVBRkpBLENBREo7TUFNSCIsIm5hbWVzIjpbIkNvbnRyb2xsZXIiLCJQYWdlUmVhY3RXaWRnZXRDb250cm9sbGVyIiwiV2lkZ2V0IiwiUGFnZSIsInByb3BzIiwiUmVhY3QiLCJjbGFzc05hbWUiLCJ1c2VyIiwidXJpIiwidmFycyIsImdldCJdLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXMiOlsicHJvamVjdC9tb2R1bGVzL3dlbGNvbWUvdHMvY29udHJvbGxlci50cyIsInByb2plY3QvbW9kdWxlcy93ZWxjb21lL3RzL3ZpZXdzL2luZGV4LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6W251bGwsbnVsbF19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O01BQUE7O01BQ0E7TUFFTzs7O01BQVUsTUFDWEEsVUFEVyxTQUNRQywrQkFEUixDQUNpQztRQUNwQyxJQUFOQyxNQUFNO1VBQ04sT0FBT0MsV0FBUDtRQUNIOztNQUg2Qzs7Ozs7Ozs7Ozs7Ozs7Ozs7OztNQ0psRDs7TUFFTSxTQUFVQSxJQUFWLENBQWVDLEtBQWYsRUFBb0I7UUFDdEIsTUFBTUMsS0FBSyxHQUFHRCxLQUFLLENBQUNFLEdBQU5GLENBQVVHLElBQVZILENBQWVJLEdBQWZKLENBQW1CLE9BQW5CQSxDQUFkO1FBRUEsT0FDSUs7VUFBS0MsU0FBUyxFQUFDO1FBQWZELEdBQ0lBLCtDQUNlQTtVQUFNQyxTQUFTLEVBQUM7UUFBaEJELEdBQXNCLGVBQXRCQSxDQURmQSx1Q0FESkEsRUFLSUE7VUFBWUosS0FBSyxFQUFFQTtRQUFuQkksRUFMSkEsQ0FESjtNQVNIIiwibmFtZXMiOlsiQ29udHJvbGxlciIsIlBhZ2VSZWFjdFdpZGdldENvbnRyb2xsZXIiLCJXaWRnZXQiLCJQYWdlIiwicHJvcHMiLCJlbnRyeSIsInVyaSIsInZhcnMiLCJnZXQiLCJSZWFjdCIsImNsYXNzTmFtZSJdLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXMiOlsicHJvamVjdC9tb2R1bGVzL2hvbWUvdHMvY29udHJvbGxlci50cyIsInByb2plY3QvbW9kdWxlcy9ob21lL3RzL3ZpZXdzL2luZGV4LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6W251bGwsbnVsbF19
