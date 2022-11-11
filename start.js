@@ -1,73 +1,65 @@
-define(["@beyond-js/kernel/bundle", "@beyond-js/kernel/transversals", "@beyond-js/widgets/render", "@beyond-js/kernel/routing"], function (dependency_0, dependency_1, dependency_2, dependency_3) {
+System.register(["@beyond-js/kernel@0.1.1/bundle", "@beyond-js/kernel@0.1.1/transversals", "@beyond-js/widgets@0.1.0/render"], function (_export, _context) {
   "use strict";
 
-  const {
-    Transversal
-  } = brequire('@beyond-js/kernel/transversals');
-  const transversal = new Transversal('start', '');
-  /*************
-  BUNDLE: WIDGET
-  *************/
+  var dependency_0, dependency_1, dependency_2, Transversal, __beyond_transversal, widgets, bundles;
 
-  const {
-    widgets
-  } = brequire('@beyond-js/widgets/render');
-  widgets.register([{
-    "name": "home-page",
-    "id": "@beyond-tests/sr-app/home",
-    "is": "page",
-    "render": {
-      "csr": false,
-      "sr": ["/beyond", "/sr"]
-    },
-    "route": "/${entry}"
-  }, {
-    "name": "main-layout",
-    "id": "@beyond-tests/sr-app/layout/main",
-    "is": "layout",
-    "render": {
-      "csr": false,
-      "sr": []
-    }
-  }, {
-    "name": "message-wd",
-    "attrs": ["entry"],
-    "id": "@beyond-tests/sr-app/message",
-    "render": {
-      "csr": false,
-      "sr": [{
-        "entry": "beyond"
+  return {
+    setters: [function (_beyondJsKernel011Bundle) {
+      dependency_0 = _beyondJsKernel011Bundle;
+    }, function (_beyondJsKernel011Transversals) {
+      dependency_1 = _beyondJsKernel011Transversals;
+    }, function (_beyondJsWidgets010Render) {
+      dependency_2 = _beyondJsWidgets010Render;
+    }],
+    execute: function () {
+      ({
+        Transversal
+      } = brequire('@beyond-js/kernel/transversals'));
+
+      _export("__beyond_transversal", __beyond_transversal = new Transversal('start', ''));
+
+      __beyond_transversal.dependencies.update([['@beyond-js/kernel/transversals', dependency_1], ['@beyond-js/widgets/render', dependency_2]]);
+      /*************
+      BUNDLE: WIDGET
+      *************/
+
+
+      ({
+        widgets
+      } = brequire('@beyond-js/widgets/render'));
+      widgets.register([{
+        "name": "home-page",
+        "vspecifier": "@beyond-tests/sr-app@1.0.0/home",
+        "is": "page",
+        "render": {
+          "csr": false,
+          "sr": ["/beyond", "/render", "/"]
+        },
+        "route": "/${entry}"
       }, {
-        "entry": "sr"
-      }]
+        "name": "main-layout",
+        "vspecifier": "@beyond-tests/sr-app@1.0.0/layout/main",
+        "is": "layout",
+        "render": {
+          "csr": false,
+          "sr": true
+        }
+      }, {
+        "name": "message-wd",
+        "attrs": ["entry"],
+        "vspecifier": "@beyond-tests/sr-app@1.0.0/message",
+        "render": {
+          "csr": false,
+          "sr": [{
+            "entry": "beyond"
+          }, {
+            "entry": "render"
+          }]
+        }
+      }]);
+      bundles = [];
+
+      __beyond_transversal.initialise(bundles);
     }
-  }]);
-  const bundles = new Map();
-  /**********************
-  MODULE: unnamed/routing
-  **********************/
-
-  bundles.set({
-    "module": "@beyond-tests/sr-app/unnamed/routing",
-    "bundle": "start"
-  }, function (ims, exports) {
-    /*************************
-    INTERNAL MODULE: ./routing
-    *************************/
-    ims.set('./routing', {
-      hash: 3204864713,
-      creator: function (require, exports) {
-        "use strict";
-
-        var _routing = require("@beyond-js/kernel/routing");
-
-        _routing.routing.redirect = async function redirect(uri) {
-          return uri.pathname;
-        };
-
-        _routing.routing.setup();
-      }
-    });
-  });
-  transversal.initialise(bundles);
+  };
 });

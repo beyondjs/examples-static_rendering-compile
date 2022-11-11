@@ -1,5 +1,15 @@
-define([], () => {
-const require = () => void 0;
+System.register([], (_exports, _context) => {
+
+const bimport = specifier => {
+	const dependencies = new Map([["scheduler","0.23.0"]]);
+	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
+};
+
+var dependencies = new Map();
+var require = dependency => dependencies.get(dependency);
+return {
+setters: [],
+execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;
 const module = {};
@@ -636,6 +646,6 @@ module.exports = __toCommonJS(scheduler_0_23_0_exports);
 };
 
 code(module, require);
-return module.exports;
-});
+_exports(module.exports);
+}}});
 

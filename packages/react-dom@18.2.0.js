@@ -1,7 +1,15 @@
-define(["react@18.2.0","scheduler@0.23.0"], (dep_0, dep_1) => {
+System.register(["react@18.2.0","scheduler@0.23.0"], (_exports, _context) => {
 
-const dependencies = new Map([['react@18.2.0', dep_0],['scheduler@0.23.0', dep_1]]);
-const require = dependency => dependencies.get(dependency);
+const bimport = specifier => {
+	const dependencies = new Map([["react","18.2.0"],["scheduler","0.23.0"],["react-dom","18.2.0"]]);
+	return globalThis.bimport(globalThis.bimport.resolve(specifier, dependencies));
+};
+
+var dependencies = new Map();
+var require = dependency => dependencies.get(dependency);
+return {
+setters: [dep => dependencies.set('react@18.2.0', dep), dep => dependencies.set('scheduler@0.23.0', dep)],
+execute: function() {
 // Prevent esbuild from considering the context to be amd
 const define = void 0;
 const module = {};
@@ -24553,6 +24561,6 @@ module.exports = __toCommonJS(react_dom_18_2_0_exports);
 };
 
 code(module, require);
-return module.exports;
-});
+_exports(module.exports);
+}}});
 
