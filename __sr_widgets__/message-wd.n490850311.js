@@ -1,0 +1,1 @@
+{"html":"<link href=\"##_!@beyond-tests/sr-app!_##global.css\" rel=\"stylesheet\"/><link href=\"##_!@beyond-tests/sr-app@1.0.0!_##message.css\" rel=\"stylesheet\"/><div>I&#x27;m a <span class=\"name\">Static Rendering(SR) Widget </span>and I&#x27;m displaying the attribute you put in the URL: <strong>widget</strong></div>"}

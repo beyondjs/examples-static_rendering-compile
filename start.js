@@ -33,7 +33,7 @@ System.register(["@beyond-js/kernel@0.1.1/bundle", "@beyond-js/kernel@0.1.1/tran
         "is": "page",
         "render": {
           "csr": false,
-          "sr": ["/beyond", "/render", "/"]
+          "sr": ["/", "/widget"]
         },
         "route": "/${entry}"
       }, {
@@ -51,9 +51,7 @@ System.register(["@beyond-js/kernel@0.1.1/bundle", "@beyond-js/kernel@0.1.1/tran
         "render": {
           "csr": false,
           "sr": [{
-            "entry": "beyond"
-          }, {
-            "entry": "render"
+            "entry": "widget"
           }]
         }
       }]);

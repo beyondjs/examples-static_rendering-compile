@@ -42,7 +42,7 @@ System.register(["@beyond-js/widgets@0.1.0/render", "@beyond-js/kernel@0.1.1/bun
         "is": "page",
         "render": {
           "csr": false,
-          "sr": ["/beyond", "/render", "/"]
+          "sr": ["/", "/widget"]
         },
         "route": "/${entry}"
       }]);
@@ -83,7 +83,7 @@ System.register(["@beyond-js/widgets@0.1.0/render", "@beyond-js/kernel@0.1.1/bun
       *****************************/
 
       ims.set('./views/index', {
-        hash: 3381657902,
+        hash: 3143446225,
         creator: function (require, exports) {
           "use strict";
 
@@ -102,7 +102,7 @@ System.register(["@beyond-js/widgets@0.1.0/render", "@beyond-js/kernel@0.1.1/bun
               className: "name"
             }, "BeyondJs test"), ". Im a page with static rendering."), entry ? React.createElement("message-wd", {
               entry: entry
-            }) : React.createElement("div", null, "To display a widget you must add a parameter in the url: beyond or render"));
+            }) : React.createElement("div", null, "To display a widget, add a `widget` parameter to the url"));
           }
         }
       });
@@ -133,4 +133,4 @@ System.register(["@beyond-js/widgets@0.1.0/render", "@beyond-js/kernel@0.1.1/bun
     }
   };
 });
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztVQUFBOztVQUNBO1VBRU87OztVQUFVLE1BQ1hBLFVBRFcsU0FDUUMsK0JBRFIsQ0FDaUM7WUFDcEMsSUFBTkMsTUFBTTtjQUNOLE9BQU9DLFdBQVA7WUFDSDs7VUFINkM7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUNKbEQ7O1VBRU0sU0FBVUEsSUFBVixDQUFlQyxLQUFmLEVBQW9CO1lBQ3RCLE1BQU1DLEtBQUssR0FBR0QsS0FBSyxDQUFDRSxHQUFORixDQUFVRyxJQUFWSCxDQUFlSSxHQUFmSixDQUFtQixPQUFuQkEsQ0FBZDtZQUVBLE9BQ0lLO2NBQUtDLFNBQVMsRUFBQztZQUFmRCxHQUNJQSwrQ0FDZUE7Y0FBTUMsU0FBUyxFQUFDO1lBQWhCRCxHQUFzQixlQUF0QkEsQ0FEZkEsdUNBREpBLEVBS0tKLEtBQUssR0FDRkk7Y0FBWUosS0FBSyxFQUFFQTtZQUFuQkksRUFERSxHQUdGQSw2R0FSUkEsQ0FESjtVQWNIIiwibmFtZXMiOlsiQ29udHJvbGxlciIsIlBhZ2VSZWFjdFdpZGdldENvbnRyb2xsZXIiLCJXaWRnZXQiLCJQYWdlIiwicHJvcHMiLCJlbnRyeSIsInVyaSIsInZhcnMiLCJnZXQiLCJSZWFjdCIsImNsYXNzTmFtZSJdLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXMiOlsicHJvamVjdC9tb2R1bGVzL2hvbWUvdHMvY29udHJvbGxlci50cyIsInByb2plY3QvbW9kdWxlcy9ob21lL3RzL3ZpZXdzL2luZGV4LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6W251bGwsbnVsbF19
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztVQUFBOztVQUNBO1VBRU87OztVQUFVLE1BQ1hBLFVBRFcsU0FDUUMsK0JBRFIsQ0FDaUM7WUFDcEMsSUFBTkMsTUFBTTtjQUNOLE9BQU9DLFdBQVA7WUFDSDs7VUFINkM7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7VUNKbEQ7O1VBRU0sU0FBVUEsSUFBVixDQUFlQyxLQUFmLEVBQW9CO1lBQ3RCLE1BQU1DLEtBQUssR0FBR0QsS0FBSyxDQUFDRSxHQUFORixDQUFVRyxJQUFWSCxDQUFlSSxHQUFmSixDQUFtQixPQUFuQkEsQ0FBZDtZQUVBLE9BQ0lLO2NBQUtDLFNBQVMsRUFBQztZQUFmRCxHQUNJQSwrQ0FDZUE7Y0FBTUMsU0FBUyxFQUFDO1lBQWhCRCxHQUFzQixlQUF0QkEsQ0FEZkEsdUNBREpBLEVBS0tKLEtBQUssR0FDRkk7Y0FBWUosS0FBSyxFQUFFQTtZQUFuQkksRUFERSxHQUdGQSw0RkFSUkEsQ0FESjtVQWFIIiwibmFtZXMiOlsiQ29udHJvbGxlciIsIlBhZ2VSZWFjdFdpZGdldENvbnRyb2xsZXIiLCJXaWRnZXQiLCJQYWdlIiwicHJvcHMiLCJlbnRyeSIsInVyaSIsInZhcnMiLCJnZXQiLCJSZWFjdCIsImNsYXNzTmFtZSJdLCJzb3VyY2VSb290IjoiLyIsInNvdXJjZXMiOlsicHJvamVjdC9tb2R1bGVzL2hvbWUvdHMvY29udHJvbGxlci50cyIsInByb2plY3QvbW9kdWxlcy9ob21lL3RzL3ZpZXdzL2luZGV4LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6W251bGwsbnVsbF19
